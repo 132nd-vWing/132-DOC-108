@@ -1,0 +1,104 @@
+\documentclass[12pt,a4paper]{108th}
+\graphicspath{{./sop/images}{./general}}
+
+%-------------------------------------------------------------------------------
+% TITLE PAGE INFO
+%-------------------------------------------------------------------------------
+
+\title{108TH SOP}
+
+\subtitle{%
+  108{\fontsize{13pt}{1em}\fontbody th} Spectres Standard Operating Procedures
+  \\for the F-14B Tomcat}
+
+\version{3.0}
+
+%-------------------------------------------------------------------------------
+% META TABLE DATA
+%-------------------------------------------------------------------------------
+
+\appliesto{108\th SQN}
+\type{SOP}
+\published{unpublished}
+\owner{MartinCo}
+\acknowledgements{Neck, Entropy, Sithis, InFlames, Shadow}
+
+%-------------------------------------------------------------------------------
+% CHANGE LOG
+%-------------------------------------------------------------------------------
+
+\change{V1}{Basic port of 494th SOP V2 Redesign of 494th layout}
+
+\change{V3}{Incorporate Comments from Neck, Entropy}
+
+\change{V4}{%
+  Incorporate fixes by Entropy, lighting simplification, Deconfliction during
+  turns, deleted Brevity Prowords (superfluous, out of scope)}
+
+\change{V5}{%
+  Incorporated BVR section SOP on Phoenix, deleted chapter 5 mission planning
+  and reordered, simplified formations and turns and corrected many items
+}
+
+\change{V6}{%
+  EvilIvan edits and fixes, additions to Departure processes, Fuel sections
+  added for economy and landing CV, Lighting re done, 5 new appendices }
+
+\change{V7}{%
+  Font change, contents change, radio/comms clarifications, 2 appendices V8
+  Changes to Procedures, to be more in link with 617th SOP
+}
+
+\change{v9}{Add Transition to Trail}
+
+\change{v2.0}{Chapter 8 rework by @Inflames}
+
+\change{v2.1}{CAS by Sithis} \change{v3.0}{%
+  Migration to \LaTeX, cleaned up formatting and consistency, Integrate
+  @Shadow's feedback / fixes
+}
+
+%-------------------------------------------------------------------------------
+% DOCUMENT
+%-------------------------------------------------------------------------------
+
+\begin{document} \maketitle
+
+  \include{sop/preamble.tex}
+
+  \metatable
+
+  % TOCS
+   \let\oldclearpage\clearpage
+  \let\clearpage\relax
+  \newpage
+    \tableofcontents
+  \newpage
+    \listofappendices
+  \let\clearpage\oldclearpage
+
+  % Main document starts here
+  \include{sop/document-scope.tex}
+  \include{sop/crew-roles-responsibilities.tex}
+  \include{sop/mission-responsibilities.tex}
+  \include{sop/procedures.tex}
+  \include{sop/communication.tex}
+  \include{sop/contracts.tex}
+  \include{sop/departures.tex}
+  \include{sop/formations.tex}
+  \include{sop/enroute-checks.tex}
+  \include{sop/aar.tex}
+  \include{sop/on-station.tex}
+  \include{sop/bvr.tex}
+  \include{sop/acm.tex}
+  \include{sop/air-to-ground.tex}
+  \include{sop/recovery.tex}
+  \include{sop/emergencies.tex}
+
+  \begin{appendices}
+    \include{sop/appendix-a.tex}
+    \include{sop/appendix-b-comms.tex}
+    \include{sop/appendices-other.tex}
+  \end{appendices}
+
+\end{document}

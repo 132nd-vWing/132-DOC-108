@@ -1,0 +1,240 @@
+\section{BVR EXAMPLE COMM FLOWS}
+
+A section of fighters, callsign Spectre 11-12 are executing an Intercept event
+with Magic as AIC and 'Denver' as bullseye.
+
+{\color{red}PRI}: Used here to refer to the Flight channel (\textbf{FORWARD
+RADIO}) \\
+{\color{red}AUX}: Used here to refer to Agency Control (AIC) (\textbf{AFT
+RADIO})
+
+\subsection*{Starting the fight}
+
+\textbf{AUX}: "Spectre 11, your bandits are set"
+
+If the fighters are ready
+
+\textbf{AUX}: "Spectre 11, Tapes on, fight's on"
+
+If the fighters need more than 30 seconds
+
+\textbf{AUX}: "Fighters need (time)"
+
+\subsection*{PreCommit}
+
+\textbf{AUX}: "Magic, Spectre 11, picture"\\
+...\\
+Response to AIC's picture:\\
+\textbf{AUX}: "Spectre 11"
+
+\subsection*{Commit}
+
+\textbf{AUX}: "Spectre, commit"\\
+\textbf{PRI}: "check tapes, master arm"
+
+\subsection{Contact/Declaration}
+
+\textbf{AUX}: "Magic, Spectre 11, contact BRAA XXX/YY, (alt), declare!"\\
+or
+\textbf{AUX}: "Magic, Spectre 11, contact Denver XXX/YY, (alt), declare!"
+
+If looking for declaration but already correlated.
+
+\textbf{AUX}: "Magic, Spectre 11, declare (group name)"
+
+\subsection*{Targeting}
+
+\textbf{AUX}: "Spectre, target, (group name)" \\
+\textbf{AUX}: "Spectre 11 target high contact, Spectre 12 target low contact"
+
+\subsection*{45 NM comm (not taught, this is an awareness call by anyone)}
+
+\textbf{AUX}: "Spectre 11, (group name), 45 miles"
+
+\subsection*{Meld}
+
+\textbf{PRI}: "Spectre, MELD BRAA, XXX/YY, (alt)" Leave off altitude if
+targeting a stack
+
+\newpage
+
+\subsection*{Sort}
+
+Examples here are for non AZ sorts:
+
+\textbf{PRI}: "Spectre, sort range"\\
+\textbf{PRI}: "Spectre 12, sorted trail man"
+
+\textbf{PRI}: "Spectre, sort elevation"\\
+\textbf{PRI}: "Spectre 12, sorted trail man"
+
+\textbf{PRI}: "Spectre 11, (group name), single only, (alt)"\\
+\textbf{PRI}: "Spectre 12, same"
+
+Only if different than the altitude previously called.
+
+\textbf{PRI}: "Spectre 12, (group name), single only, (alt)"
+
+\subsection*{Employment/Crank}
+
+\textbf{AUX}: "Spectre 11, fox-3" \\
+\textbf{AUX}: "Spectre 11, fox-3, two ship" \textit{- indicates missiles were
+employed on both contacts in a group} \\
+\textbf{AUX}: "Spectre 11, second fox-3" \textit{- indicates two missiles were
+employed on the same contact} \\
+\textbf{PRI}: "Spectre, crank (right/left)"
+
+\subsection*{Missile Status comm}
+
+Missile status comm always follows the same format and is broadcast on
+\textbf{PRI}
+
+\narrow{\textit{"C/S, (missile status), (sort), (group name)"}}
+
+\subsubsection*{MRM (Medium Range Missile)}
+
+\textbf{PRI}: "Spectre 11, timeout, single only, (alt), single group"
+\narrow{\textit{Used to indicate a missile timed out on a group assessed
+strength single only}}
+
+\textbf{PRI}: "Spectre 12, timeout, trail man, lead group"
+\narrow{\textit{Used to indicate a missile timed out on the trail man of the
+lead group}}
+
+
+\textbf{PRI}: "Spectre 11, timeout, two ship, high contact"
+\narrow{\textit{Used to indicate a missile timed out on a group stack and the
+high contact was assessed strength two}}
+
+\textbf{PRI}: "timeout, single only, (alt), low contact"
+\narrow{\textit{Used to indicate a missile timed out on a group stack and the
+low contact was assessed strength single only.}}
+
+\textbf{PRI}: "Spectre 12, kill, locked, (alt), west group"
+\narrow{\textit{Used to indicate a fighter was tally at missile timeout, and
+had not sorted}}
+
+\textbf{PRI}: "Spectre 11, timeout, south man, middle man, trail group"
+\narrow{\textit{Used to indicate missiles timed out on two of the three
+contacts within a group}}
+
+\textbf{PRI}: "Spectre 12, shot trashed"
+\narrow{\textit{Used to indicate a missile was trashed}}
+
+\subsubsection*{SRM (Short Range Missile)}
+
+\textbf{PRI}: "Spectre 11, kill, locked, (alt), single group"
+
+\subsection*{Fighter Request for SA}
+
+\textbf{AUX}: "Magic, Spectre 11, separation (group name)"
+\narrow{\textit{Used to get separation between groups, for example groups in
+range}}
+
+\textbf{AUX}: "Magic, Spectre 11, status (group name)" \\
+\textbf{AUX}: "Magic, Spectre 11, status trail group"
+\narrow{\textit{Used to ask for an update on a group, for example groups in
+range and the lead group maneuvers}}
+
+\subsection*{Defence}
+
+\textbf{AUX}: "Spectre, defend (cardinal direction)"
+\textbf{ICS}: "Heading XXX"
+
+\subsection*{In}
+
+\textbf{AUX}: "Spectre, in L/R" \\
+\textbf{PRI}: "Heading XXX" \\
+\textbf{AUX}: "Spectre 11, fox-3"\\
+\textbf{AUX}: "Spectre 11, timeout, locked, (alt), (group name), fox-2"\\
+\textbf{AUX}: "Spectre 11, kill, locked, (alt), (group name)"
+
+\subsection*{Post Merge}
+
+\textit{Immediately post-merge}
+
+\textbf{AUX}: "Spectre, flow 270"
+
+\textit{Post SRR}
+
+\textbf{AUX}: "Magic, Spectre 11, Denver XXX/YY, flow 270, picture"
+
+\narrow{\textit{Flow is called with a heading, not a direction.}}
+
+\newpage
+
+\subsection*{Abort}
+
+\textbf{AUX}: "Spectre, abort L/R"\\
+\textbf{PRI}: "Heading XXX"
+
+\textit{Post-SRR complete}
+
+\textbf{AUX}: "Magic, Spectre 11, picture"
+
+\subsection*{Clean}
+
+First fighter to lose radar SA.
+
+\textbf{PRI}: "Spectre 11, clean"
+
+Second fighter has radar SA.
+
+\textbf{PRI}: "Spectre, MELD BRAA, XXX/YY, (alt)"
+
+Second fighter does not have radar SA.
+
+\textbf{AUX}: "Magic, Spectre 11, clean (group name)"
+
+\subsection{Maneuvering Targets}
+
+Wingman has first radar SA to maneuver.
+
+\textbf{AUX}: "Spectre 12, (group name) maneuver" \\
+\textbf{PRI}: (Spectre11): "go pure"
+
+\subsection*{Reset}
+
+\textbf{AUX}: "Spectre, reset (cardinal direction), Magic monitor (group name)"
+\\
+\textbf{PRI}: "Heading XXX"
+
+\subsection*{Buddy Lock / Buddy Spike}
+
+\textbf{PRI}: "Spectre 11, buddy spike"
+\narrow{\textit{Used by the fighter that assess they are being spiked by their
+wingman}}
+
+\textbf{PRI}: "Spectre 11, buddy lock"
+\narrow{\textit{Used by the fighter that realizes they have locked their
+wingman}}
+
+\newpage
+
+\subsection*{Section VID}
+
+\textbf{AUX}: "Spectre, defend (cardinal direction)"\\
+\textbf{Lead ICS}: "Heading XXX"\\
+
+\textbf{If lead is assuming eyeball role}
+\narrow{
+  \textbf{Lead AUX}: "Spectre 11, in L/R, eyeball"\\
+  \textit{(5-10 seconds later)}\\
+  \textbf{Wing AUX}: "Spectre 12, in L/R, shooter"\\
+}
+
+\textbf{If directing wingman to be the eyeball}
+\narrow{
+  \textbf{Lead SNFO AUX}: "Spectre 12, you're eyeball" \\
+  \textbf{Wing AUX}: "Spectre 12, in L/R, eyeball"
+}
+
+\textit{(5-10 seconds prior VID)}\\
+\textbf{Eyeball AUX}: "<EYEBALL>, standby (group name)"
+
+\textbf{Eyeball AUX}: "Shoot, Shoot, NATO ID, (group name), hostile"\\
+or\\
+\textbf{Eyeball AUX}: "Friendlies, Friendlies skip it" or "Unable ID"
+
+\textbf{Shooter AUX}: "<SHOOTER>, fox-2/3"
+
