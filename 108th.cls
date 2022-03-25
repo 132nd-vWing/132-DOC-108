@@ -31,12 +31,14 @@
 % Drawing
 \RequirePackage{tikz}
 \usetikzlibrary{fadings}  % Anchoring / east west etc.
+\RequirePackage[export]{adjustbox}
+
 
 % titleps from titlesec for nice heading styles with links
 \RequirePackage[pagestyles]{titlesec}
 \RequirePackage{titletoc}
 \RequirePackage[title]{appendix}
-\RequirePackage{hyperref}
+\RequirePackage[hidelinks]{hyperref}
 
 % Nice fancy headers / Footers (and page numbers)
 \RequirePackage{fancyhdr}
@@ -153,6 +155,10 @@
     }%
   }
 }
+
+% Circled numbers etc.
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
 
 %-------------------------------------------------------------------------------
 % Section Heading Formatting
@@ -292,10 +298,10 @@
 
       \fontsize{11pt}{1em}\fontbody
 
-      \underline{\href{www.132virtualwing.org}{www.132virtualwing.org}}\\
+      \href{www.132virtualwing.org}{www.132virtualwing.org}\\
       This work is licensed under a
-      \underline{\href{https://creativecommons.org/licenses/by-sa/3.0/}{Creative
-       Commons Attribution-ShareAlike 3.0 Unported License}}.
+      \href{https://creativecommons.org/licenses/by-sa/3.0/}{Creative
+       Commons Attribution-ShareAlike 3.0 Unported License}.
 
     }
   \end{titlepage}

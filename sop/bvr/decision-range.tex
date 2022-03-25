@@ -3,16 +3,17 @@
 \subsubsection*{Simple Definitions}
 
 \begin{itemize}
-  \item Abort: Emergency egress
+  \item Abort: Egress from an engagement without intent to recommit.
 
-  \item Skate: Planned egress
+  \item Skate: Egress from an engagement with possible/likely option to
+    recommit.
 
-  \item Decision Range: The range NLT you can perform a notch and assess whilst
-    being able to Abort
+  \item Decision Range: NLT range from target allowing time to perform a Notch
+    and assess before reaching MAR
 
-  \item Banzai: Head into the merge (press)
+  \item Banzai: Head into the merge (press).
 
-  \item F-Pole: The distance from launcher to target if the shot were now
+  \item F-Pole: The distance from launcher to target if the shot was taken now.
 
   \item MAR: Minimum Abort Range; the closest Range at which you can safely
     turn from the fight and run from a specific enemy missile.
@@ -21,7 +22,7 @@
 
 \subsubsection*{General}
 
-Once in the Crank, the Flight has to monitor several items:
+Once in the Crank, the flight has to monitor several items:
 
 \begin{itemize}
   \item RWR - Enemy Spikes (Plane and Missile)
@@ -33,43 +34,47 @@ Once in the Crank, the Flight has to monitor several items:
   \item Range, especially Minimum Abort Range
 \end{itemize}
 
-Culminating in the choice to Banzai, Skate or Abort.
+Culminating in a decision to Banzai, Skate or Abort.
 
-This phase is quite complex and of the hardest workload.
+This phase is quite complex and of the highest workload.
 
 \sidebyside{0.5}{%
-  Thus far the flight has given good total energy package to the missile shot,
-  at the bandit, at the correct range, then increased the Bandit's F-pole to
-  lengthen the travel distance of a return shot. At the point where there are
-  missiles in the air and possibly returned shots, the flight leader has to
-  concern themselves with what to do next.
+  So far the flight has given good initial launch energy to the missile shot,
+  then increased the Bandit's F-pole to increase the travel distance of a
+  return shot. At the point where there are missiles in the air and possibly
+  returned shots, the flight leader has to concern themselves with what to do
+  next.
 }{
   \includegraphics[width=\textwidth,align=t]{bvr/decision}
 }
 
 The safest goal for a long shot is to Skate out and exit the fight with an open
 mind to recommit, once the missile is properly under its own guidance.
-\textbf{The Tomcat should never ordinarily choose to merge whilst other options
-exist to succeed in the Mission}. The flight can still monitor the shot using
-the count down timer. There is no Pitbull timer for when the AIM-54 goes
-active, however it can be interpreted from the timer and range. At 15nm Pitbull
-range, napkin maths gives us a bit more than half of the original timer count.
-So, with a 90 second shot, we can call Pitbull at 40 seconds to go. We should
-note: DCS is not as fussy yet as the missile code is simplified
+\textbf{The Tomcat should never choose to merge whilst other options
+exist to succeed in the mission}. The flight can still monitor the shot using
+the "Time To Impact" (TTI) timer displayed to the right of the target's TWS
+track symbol.
 
-At Pitbull the Pilot needs to put the enemy on the 3-9 line and notch. At this
-point the crew are looking for Spikes/Nails, performing chaffing, observing the
+Once the TTI starts to flash, the Missile Active command has been sent and the
+Phoenix and can be considered 'Pitbull'. Depending on the TGTS target size
+switch setting, the Missile Active command is sent at a calculated range from
+target of 13nm (LARGE), 10nm (NORM) or 6nm (SMALL) - this usually translates to
+remaining TTIs of around 20, 15 or 8 seconds from calculated impact.
+
+Upon Pitbull the Pilot should put the enemy on the 3-9 line and notch. At this
+point the crew are looking for Spikes/Nails, releasing chaff, observing the
 relative aspect and altitude of the Bandit and its range for determining the
-Minimum Abort Range (MAR). Knowing the Bandit's MAR is a matter of Briefing and
+Minimum Abort Range (MAR). Knowing the Bandit's MAR is a matter of briefing and
 experience.
 
 Should the Bandit drop their spike and appear defensive in aspect or altitude
 change, the choice to Press or "Banzai" could be made
 
 \boxed{%
-  Note: Most of this is advanced and kept for CT and A-A TTP 1 and 2. For now,
-  all that is required to know is that there are three choices and three
-  possible calls on Pri; to "Banzai", "Skate" or to "Abort".
+  Note: Most of this is advanced and kept for CT and
+  \href{https://cloud.132virtualwing.org/s/DdLFQX4LLTExij2}{132\nd Air to Air
+  TTP}. For now, all that is required to know is that there are three choices
+  and three possible calls on Pri; to "Banzai", "Skate" or to "Abort".
 }
 
 \subsubsection*{Example}
@@ -77,7 +82,7 @@ change, the choice to Press or "Banzai" could be made
 
 \textbf{FL RIO (Pri):} "1, Pitbull!"\\
 \textbf{WM RIO (Pri):} "2, Pitbull!"\\
-\textbf{FL RIO (Pri):} "1 Timeout and Naked, Spectre Banzai!"\\
+\textbf{FL RIO (Pri):} "1, Timeout and Naked, Spectre, Banzai!"\\
 
 \textbf{Or}
 
@@ -88,6 +93,7 @@ change, the choice to Press or "Banzai" could be made
 \boxed{%
   Both RIO's will call out Spikes on RWR and transitions to Naked or any change
   thereof. They will also monitor their own shot and report both Pitbull and
-  Timeout if possible. At Pitbull they release the gimbal lock and put any
-  threat on the 3-9 before making a decision on whether to Abort or Banzai.
+  Timeout if possible. At Pitbull they stop keeping the target track inside
+  gimbal limits and put any threat on the 3-9 before making a decision on
+  whether to Abort or Banzai.
 }

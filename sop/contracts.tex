@@ -2,7 +2,7 @@
 
 \subsection{Standard 108\th Contracts}
 
-Contracts are enabled in order to reduce briefing times, increase radio
+Contracts are established in order to reduce briefing times, increase radio
 brevity, remove ambiguity, and increase speed and efficiency. Use them as best
 as you can. Contracts can be overridden in briefings and should be done so
 \textbf{sparingly} and with good reason.
@@ -48,15 +48,21 @@ that is used in 108\th will be}
 \subsubsection{Bullseye Contract}
 \label{subsubsec:contract-bullseye}
 
-All crews shall set their FIXED POINT WP to BULLSEYE. This will allow pilots,
-especially when they fly without a human RIO to quickly select their FP WP, and
-read the precise bullseye position. Please note, you need to read the
-reciprocal of the heading needle. If the FP needle points to the NORTH with 50
-nm to go, you will read your position as \textbf{"one-eight zero for fifty"}.
+All crews shall set their \textbf{DEF PT} (defended point) to BULLSEYE.
+This will allow pilots to quickly select the \textbf{MAN} destination steering
+point and read their precise bullseye position when flying with Jester. Please
+note, you need to read the reciprocal of the heading needle.
 
-The NAVGRID System will also be set to Bullseye for easy reference, but the
-above will assist with giving your precise position when asked, especially when
-flying with Jester.
+For a named bullseye MARY; If the steer point destination needle points to the
+NORTH with 50 nm to go, you will read your position as \textbf{"MARY, one eight
+zero (degrees), five zero (miles)"}.
+
+The NAVGRID \textbf{YY} will also be set to Bullseye for easy reference,
+however the above will assist with giving your precise position when asked,
+especially when flying with Jester.
+
+\textbf{FIX PT} can be used for INS alignment during mission or added
+flexibility as an additional waypoint.
 
 \subsection{Pilot RIO contracts}
 
@@ -130,6 +136,7 @@ Pilot has control over weapons with the following exceptions
 \end{itemize}
 
 \subsubsection{Radar and combat contract}
+\label{sec:radar-and-combat-contract}
 
 The Mission Commander will have control of
 
@@ -143,8 +150,8 @@ The RIO will have control of
 
 \begin{itemize}
 
-  \item The Radar unless it is given to the Pilot, ICS: "You have the radar, I
-    am Heads Up"
+  \item The Radar, unless it has been transferred to the Pilot over ICS: "Your
+  radar" / "My Radar"
 
   \item The intercept parameters
 
@@ -153,19 +160,26 @@ The RIO will have control of
 The Pilot will take control of
 
 \begin{itemize}
-  \item The Radar when the RIO calls heads up
-  \item The Radar when tally
-  \item The Radar in any exceptional visual based requirement
-\end{itemize}
 
-By calling, ICS: "I have the radar" and selecting the relevant PLM mode the
-Pilot will relinquish the radar as soon as is possible by resetting his scan
-twice.
+  \item The Radar when the RIO calls "Your Radar"
+
+  \item The Radar when tally
+
+  \item The Radar in any exceptional visual based requirement, by calling
+  \textbf{ICS:} "My Radar" and selecting the relevant PLM mode
+
+  \item Relinquishing the radar with "Your Radar" as soon as practical by
+  resetting his scan twice.
+
+\end{itemize}
 
 \subsubsection{Ejection contract}
 
-RIO shall set \textbf{Command Ejection} in DCS for 108\th, thus first person to
-Eject begins the sequence for both.
+The RIO shall always set the ejection command selector \textbf{EJECT CMD} to
+\textbf{MCO} by drawing it \textbf{aft} during startup to ensure that both crew
+members are ejected regardless of who initiated the ejection. This shall be
+verbally verify with RIO during cross-checks as the Pilot's EJECT
+CMD indicator on the left vertical console is currently inoperable.
 
 \subsubsection{Start up (silent, basic contract)}
 
@@ -227,15 +241,14 @@ The formation and positional contracts are:
   \item Lineup (airfield) Lead takes the downwind (Leeward) side in any
     crosswind, otherwise the far side from the taxiway
 
-  \item Climb: for rejoin 300 KIAS at <95\% RPM. The reduced RPM
-  provides the
+  \item Climb: for rejoin 300 KIAS at <95\% RPM. The reduced RPM provides the
     wingman with the excess energy required to intercept the lead aircraft.
 
   \item Rejoin is Finger four left.
 
-  \item Cruise: best range by AoE indicator
+  \item Cruise: AoE Cruise indicator
 
-  \item Air combat readiness: Mach 0.9, combat spread, 1000' vertical
+  \item Air combat readiness: M0.9, combat spread, 1000' vertical
     separation, energy sustaining turns
 
   \item Tactical Turns of 90 degrees or more should use MIL power
@@ -243,50 +256,58 @@ The formation and positional contracts are:
   \item Small check and in place turns should require no change in throttle
     setting
 
-  \item Fuel Flow of 3000 per hour is a good cruise setting or 8.5 units AoA
+  \item A Fuel Flow of 3000pph is a good cruise setting, or use 8.5 units AoA
 
   \item When in formation, lead MUST restrict MIL power to <100\% RPM, even in
-    climbs, and maintain a similar margin above idle. This is to ensure that
-    the wingman has enough excess power available to maintain proper formation
-    positioning. Also, and even more importantly, during descent, lead should
-    always avoid using idle thrust or risk the wingman overshooting.
+    climbs. This is to ensure that the wingman has enough excess power
+    available to maintain proper formation positioning. During descent, or when
+    speedbreaks ("boards") are called to be deployed, lead should avoid
+    using idle thrust or risk the wingman overshooting.
 
 \end{itemize}
 
 \subsubsection{Sort \& Scan Contracts}
+\label{sec:contracts-sort-scan}
 
 \textbf{"Left, Lead, High - Right, Trail, Low"}
 
 Visual scanning is conducted by both mutually supporting fighters in all
-directions with emphasis on looking "Through" the other fighter and their blind
+directions with emphasis on looking "through" the other fighter and their blind
 spots. This is part of the scan contracts.
 
-Radar scanning should be by mating radars at 20nm at the current altitude and
-for the Lead to scan far and high and Wing to scan near and low.
+Radar scanning should be achieved by mating radars at 20nm at the current
+altitude and for the Lead to scan far and high and Wing to scan near and low.
 
-Tomcat also has 360-degree DL pictures and these also help both crew to
-visualise the world. See BVR section for more on Sorting.
+\includegraphics[width=\textwidth]{bvr/radar-mating}
+
+The Tomcat also offers a 360-degree view of the aerial situation around the
+aircraft by displaying data-link contacts. If datalink feed is available, this
+should be used by both crew members to build and maintain SA, e.g. by selecting
+GND STAB or by setting an HCU Offset when turning away from own radar contacts,
+to see what's going on outside own radar coverage.
+
+\newpage
 
 \subsubsection{Lost Wingman Procedures}
 
 Holding formation is the WM's responsibility. When visual contact is lost, the
 WM must call 'blind'. If FL is visual, he shall assist by stating their
-position relative to lost WM: "1 is visual, your 3 o'clock high".  If both are
-blind, the FL shall assist with re-stating heading, altitude and speed.
+position relative to lost WM: "\textit{1 is visual, your 3 o'clock high}". If
+both are blind, the FL shall assist with re-stating heading, altitude and speed.
 
-The A-A Tacan (Yardstick) should be up and running in all phases of the flight
-unless needed for navigation. If the flight is not separated by more than few
+The A-A TACAN (Yardstick) should be up and running in all phases of the flight
+unless required for navigation. If the flight is not separated by more than few
 miles, and the tactical situation allows it, WM can ask FL for a flare, or
-contrails could be used for assisted visual re-join
+contrails could be used for assisted visual re-join.
 
-If the flight got separated beyond visual range, the easiest way is to ask
+If the flight is separated beyond visual range, the easiest way is to ask
 AWACs (if available) for SNAP to the other flight member. Ideally, it should be
 the lost WM who is requesting a snap to their FL. The information provided by
-AWACS should allow the lost WM to identify their FL on the datalink and work
-out a rejoin procedure. It is mandatory that all pilots (regardless of Jester
-or RIO) know how to interpret and use the datalink and work out how to adjust
-radar range. At min radar range, the datalink is a powerful tool to work out
-the final intercept geometry for a good rejoin.
+AWACS should allow the lost WM to identify their FL with their own radar or
+datalink feed to enable a rejoin procedure. It is mandatory that all pilots
+(regardless of Jester or RIO) know how to interpret and use the datalink and
+work out how to adjust radar range. At minimum radar range, the datalink is a
+powerful tool to work out the final intercept geometry for a good rejoin.
 
 If AWACS is not available to provide snap to the other flight member, lead can
 immediately relay their position by either using a BULLSEYE reference or an
@@ -299,8 +320,25 @@ the reciprocal of your Tacan needle.
 
 Using this method, FL can at any time and with an instant read and convey their
 current position from Bullseye (see \fullref{subsubsec:contract-bullseye}) or
-from any Tacan station (simply rotate the course nob until your radial is
+from any TACAN station (simply rotate the course nob until your radial is
 displayed and read the reciprocal of the needle), and this can be used as
 reference for rejoining. It is mandatory that all crews practice reading their
 Bullseye or Tacan positions, as well as navigating to such a given position for
 fast and reliable rejoins.
+
+In order to work out an efficient and expeditious rejoin, it is advisable to
+ensure weapons safe and lock up the joined flight member in STT to get precise
+distance, closure and drift directly interpretable by the own ship pilot.
+
+Upon penetration of clouds (in situations where a tight fingertip formation is
+not feasible), it is equally advisable to use STT locks on the respective
+preceding flight member to establish a "Radar-Trail Formation" in order to
+proactively prevent a lost-wingman situation.
+
+Navigational (not tactical) radar-trail spacing between aircraft should be kept
+between min. 0,5 NM (safety, reaction time) and max. 3 NM (airspace used, ATC
+problem avoidance; based on a 30-sec. brake release interval for a departure in
+IMC).
+
+In case a joined/trailed flight member complains about the RWR warning tone
+caused by his Buddy's Lock, that's what the ALR-67 audio volume knob is for.
