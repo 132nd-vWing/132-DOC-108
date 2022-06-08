@@ -1,0 +1,56 @@
+name: Compile SOP
+
+sop_paths: &sop_paths
+  - '108th.cls'
+  - '132-SOP-108.tex'
+  - 'sop/**'
+
+on:
+  pull_request:
+    branches:
+      - master
+    paths: *sop_paths
+  push:
+    paths: *sop_paths
+    tags:
+      - 'v[1-9]+.[0-9]+.[0-9]+'
+  workflow_dispatch:
+
+env:
+  ARTIFACT_APPEND: ""
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Update Artifact name Branch
+        if: github.ref != 'refs/heads/master'
+        run: echo "::set-env name=ARTIFACT_APPEND::-${GITHUB_REF##*/}"
+
+      - name: Update Artifact name PR
+        if: ${{ contains(github.ref, 'refs/pull/') }}
+        run: echo "::set-env name=ARTIFACT_APPEND::-pr${GITHUB_REF_NAME%%/*}"
+
+      - name: Set up Git repo
+        uses: actions/checkout@v2
+
+      - name: Compile SOP
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: 132-SOP-108.tex
+          latexmk_use_xelatex: true
+
+      - name: Upload Artifact Master
+        if: github.ref == 'refs/heads/master'
+        uses: actions/upload-artifact@v2
+        with:
+          name: 132-SOP-108.pdf
+          path: 132-SOP-108.pdf
+
+      - name: Upload Artifact Dev
+        if: github.ref != 'refs/heads/master'
+        uses: actions/upload-artifact@v2
+        with:
+          name: 132-SOP-108.pdf
+          path: "132-SOP-108${{env.ARTIFACT_APPEND}}.pdf"
