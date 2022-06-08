@@ -110,24 +110,23 @@ internal bleed air pressure will prevent the gun from firing.
 
 \subsubsection*{ACM Cover}
 
-ACM cover is to specifically allow Phoenix’s and AIM7’s to leave the rails much
-sooner and could be flipped unless a radar lock is found at short range for the
-Fox2. ACM cover forces both Phoenix and AIM7 into BORESITE mode on the ACM
-panel and shines the beam ahead for Fox1. The usage depends on tally and range
-and missile selection (fleeing bandit may need a Fox1 or even Phoenix).
+The ACM cover has multiple functions. Firstly it allows access to the ACM
+jettison button, which will jettison of stores selected on the RIO’s ARMAMENT
+panel. More importantly however, it impacts the WCS behaviour by enforcing
+BRSIT (boresight) mode, SW COOL on, MSL PREP on, and sets the gunrate to high.
 
-%TODO: replace red
-\boxed[red]{
-Suggest to re-think and re-formulate this whole paragraph:
-\begin{itemize}
-  \item what's the message?
-  \item if describing all ACM cover functions, mention accessibility of the
-    underlying pilot sel. jett. button
-  \item elaborate precisely on the effects of BRST on AIM-54 and -7
-  \item name the functions precisely ('Flood Antenna / guidance mode - instead
-    of "shines 'the beam' ahead"
-\end{itemize}
-}
+For the AIM-54, ACM Active causes the missile's seeker to be positioned toward
+the current WCS track (if available), commanded active before launch, and
+reduces the launch to eject from 3 seconds to 1 - making this an effective fire
+and forget weapon at shorter ranges.
+
+The AIM-7 will be affected by the enforced boresight mode, using the continuous
+wave flood antenna to paint an area which causes the missile to track the
+strongest return regardless of any single target track that may be selected and
+disabling any pulse doppler based guidance.
+
+One must remain aware of the location of your wingman / lead when utilising
+this mode as you retain less control over the missile's behaviour.
 
 \subsection{Gameplans}
 
