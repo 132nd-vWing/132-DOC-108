@@ -22,6 +22,9 @@
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[table]{xcolor}
 
+% Letter spacing
+\defaultfontfeatures{LetterSpace=-1.5, Scale=0.9}
+
 % margins etc
 \RequirePackage{geometry}
 
@@ -75,8 +78,8 @@
 % Fonts
 %-------------------------------------------------------------------------------
 
-\newfontfamily\fontbody{Calibri}
-\newfontfamily\fontsection{Calibri Light}
+\newfontfamily\fontbody{Open Sans}
+\newfontfamily\fontsection{Open Sans Light}
 
 %-------------------------------------------------------------------------------
 % COLORS
@@ -186,12 +189,12 @@
 \titlespacing{\subsection}{0pt}{0em}{-.5em}
 
 \titleformat{\subsection}
-  {\fontsize{11pt}{1em}\color{black!50}\fontsection\itshape}
+  {\fontsize{11.5pt}{1em}\color{black!50}\fontsection\itshape}
   {\thetitle\hskip0.25em\relax}
   {10pt}{}{}
 
 \titleformat{name=\subsection,numberless}
-  {\addtocounter{subsection}{1}\fontsize{11pt}{1em}\color{black!50}\fontsection\itshape}
+  {\addtocounter{subsection}{1}\fontsize{11.5pt}{1em}\color{black!50}\fontsection\itshape}
   {\thetitle\hskip0.25em\relax}
   {0pt}{}{}
 
@@ -199,12 +202,12 @@
 \titlespacing{\subsubsection}{0em}{0em}{-0.5em}
 
 \titleformat{\subsubsection}
-  {\fontsize{11pt}{1em}\color{black!50}\fontsection\itshape}
+  {\fontsize{11.5pt}{1em}\color{black!50}\fontsection\itshape}
   {\thetitle\hskip0.25em\relax}
   {0pt}{}{}
 
 \titleformat{name=\subsubsection,numberless}
-  {\addtocounter{subsubsection}{1}\fontsize{11pt}{1em}\color{black!50}\fontsection\itshape}
+  {\addtocounter{subsubsection}{1}\fontsize{11.5pt}{1em}\color{black!50}\fontsection\itshape}
   {\thetitle\hskip0.25em\relax}
   {0pt}{}{}
 
@@ -273,7 +276,7 @@
 
 \fancyfoot[R]{%
   %\vskip-14pt%
-  \fontsize{12pt}{1em}\fontbody{\color{footerpage}Page} \thepage~|
+  \fontsize{11.5pt}{1em}\fontbody{\color{footerpage}Page} \thepage~|
   \pageref{LastPage}
 }
 
@@ -296,7 +299,7 @@
 
       \vfill
 
-      \fontsize{11pt}{1em}\fontbody
+      \fontsize{11.5pt}{1em}\fontbody
 
       \href{www.132virtualwing.org}{www.132virtualwing.org}\\
       This work is licensed under a
@@ -323,7 +326,7 @@
 
     \fontsize{28pt}{0em}\fontbody
     \@title
-    \fontsize{12pt}{0.7em}\fontbody
+    \fontsize{11.5pt}{0.7em}\fontbody
 
     \rowcolors{2}{white}{gray!10}
     \begin{tabularx}{\textwidth}{ r!{\color{black!50}\vrule width 1pt}X }
@@ -337,7 +340,7 @@
       {\color{black!50}SUMMARY OF CHANGES:} & {
         \setlength\parskip{0em}
         \setlength{\tabcolsep}{0.25em}
-        \fontsize{11pt}{1.2em}\fontbody
+        \fontsize{11.5pt}{1.2em}\fontbody
         \def\arraystretch{1.3}
         \vspace*{-1.2em} % This is important to space it correctly...weirdly
         \begin{tabularx}{\linewidth}{rX}
@@ -373,12 +376,12 @@
       leftmargin=*,
       labelsep=1.25em,
       align=LeftAlignWithIndent,
-      label={\fontsize{12pt}{1.25em}\color{black!50}\fontbody{\ifx\\#1\\
+      label={\fontsize{11.5pt}{1.25em}\color{black!50}\fontbody{\ifx\\#1\\
       \theenumi. \else #1.\theenumi \fi}}
     ]
     % These spacings make for easier to read multiline lists
     \setlength\itemsep{-0.2em}
-    \fontsize{12pt}{1.2em}\fontbody
+    \fontsize{11.5pt}{1.2em}\fontbody
   }
   {\end{enumerate}}
 
@@ -433,12 +436,13 @@
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{1em}
 
-\setmainfont{Calibri}
-\fontsize{12pt}{1em}\fontbody
+\setmainfont{Open Sans}
+\fontsize{11.5pt}{1em}\fontbody
 \pagestyle{fancy}
 
-% We don't want hyphenation
+% We don't want hyphenation, so allow more whitespace
 \hyphenpenalty=10000
+\tolerance=9999
 
 % Store the above for minipage
 \newcommand{\@minipagerestore}{%
