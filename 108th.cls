@@ -23,7 +23,8 @@
 \RequirePackage[table]{xcolor}
 
 % Letter spacing
-\defaultfontfeatures{LetterSpace=-1.5, Scale=0.9}
+\defaultfontfeatures{LetterSpace=-1.3, Scale=0.80}
+\linespread{1.01}
 
 % margins etc
 \RequirePackage{geometry}
